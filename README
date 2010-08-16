@@ -1,3 +1,7 @@
 USAGE
 =====
 Add URLs of photo albums to download in "urls.lst".
+
+RUN
+===
+./scrapy-ctl.py crawl maitreya
