@@ -20,4 +20,6 @@ USER_AGENT = '%s/%s' % (BOT_NAME, BOT_VERSION)
 
 URL_LIST_PATH = 'tw_image/urls.lst'
 ITEM_PIPELINES = ['tw_image.pipelines.TwImagePipeline']
-IMAGES_STORE = '/home/edwin/temple_website/downloaded_omei_imgs'
+
+import tempfile
+IMAGES_STORE = tempfile.gettempdir()

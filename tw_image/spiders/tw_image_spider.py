@@ -12,8 +12,9 @@ class TwImageSpider(BaseSpider):
 
   def __init__(self):
     path = os.path.join(os.getcwd(), settings['URL_LIST_PATH'])
-    f = open(path, 'r')
-    self.start_urls = [url.rstrip() for url in f.readlines()]
+    if os.path.exists(path):
+      f = open(path, 'r')
+      self.start_urls = [url.rstrip() for url in f.readlines()]
 
   def parse(self, response):
     hxs = HtmlXPathSelector(response)
